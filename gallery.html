@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raymund Coffee у Трускавці — Галерея</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 font-sans text-stone-800">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold text-amber-900 tracking-wider">Raymund Coffee</a>
+            <nav class="hidden md:flex items-center gap-2">
+                <a href="index.html" class="hover:bg-amber-50 rounded-lg px-4 py-2 font-medium transition">Головна</a>
+                <a href="about.html" class="hover:bg-amber-50 rounded-lg px-4 py-2 font-medium transition">Про нас</a>
+                <a href="services.html" class="hover:bg-amber-50 rounded-lg px-4 py-2 font-medium transition">Меню</a>
+                <a href="gallery.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 font-medium">Галерея</a>
+                <a href="booking.html" class="hover:bg-amber-50 rounded-lg px-4 py-2 font-medium transition">Бронювання</a>
+                <a href="contacts.html" class="hover:bg-amber-50 rounded-lg px-4 py-2 font-medium transition">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="mb-6 text-sm text-stone-500">
+            Головна > Галерея > [поточна]
+        </div>
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold text-amber-900 mb-4">Фотогалерея</h1>
+            <p class="text-stone-600 max-w-2xl mx-auto">Пориньте в атмосферу тепла та ароматної кави в Raymund Coffee.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Coffee shop" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Interior" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Espresso" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" alt="Cappuccino" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Bakery" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                <img src="https://images.unsplash.com/photo-1560008511-11c63416e52d?auto=format&fit=crop&w=800&q=80" alt="Ice cream" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Raymund Coffee</h3>
+                <p class="text-sm text-stone-400">Власна кава, свіжа випічка та затишна атмосфера в самому центрі Трускавця.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-white mb-4">Контакти</h3>
+                <p class="text-sm text-stone-400 mb-2">бульвар Юрія Дрогобича, 1, Трускавець</p>
+                <p class="text-sm text-stone-400 mb-2">Телефон: +380963222414</p>
+                <p class="text-sm text-stone-400">Email: info@raymundcoffee.ua</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-white mb-4">Графік роботи</h3>
+                <p class="text-sm text-stone-400 mb-2">Щодня: 09:00 – 22:00</p>
+                <div class="flex gap-4 mt-4">
+                    <a href="https://www.instagram.com/raymund_coffee/" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 mt-8 pt-8 border-t border-stone-800 text-center text-xs text-stone-500">
+            © 2024 Raymund Coffee. Усі права захищені.
+        </div>
+    </footer>
+<script>
+    document.getElementById('mobile-toggle')?.addEventListener('click', function() {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
+</html>
